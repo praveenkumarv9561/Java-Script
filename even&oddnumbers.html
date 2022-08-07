@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //4  separate even and odd numbers in a given array  
+        var A = [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            i = 0,
+            l = A.length;
+
+        while (i < l) {
+            if (A[i] % 2 === 0) {
+                A.push(A.splice(i, 1)[0]);
+                l--;
+                continue;
+            }
+            i++;
+        }
+
+        document.write(`${A}`);
+    </script>
+</body>
+
+</html>

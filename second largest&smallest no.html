@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //7. Find second largest & smallest number in given array
+        var a = [20, 30, 35, 45, 52], b = [];
+
+        b = a.filter(function (item, pos) {
+            return a.indexOf(item) == pos;
+        });
+        b.sort(function (a, b) {
+            return a > b;
+        });
+        console.log(`Second Smallest is ${b[1]}`);
+        console.log(`Second Largest is ${b[b.length - 2]}`);
+
+
+    </script>
+</body>
+
+</html>
